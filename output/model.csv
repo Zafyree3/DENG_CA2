@@ -1,4 +1,4 @@
-Model ID,Model Code,Training Date,Accuracy,Dataset ID
+ModelID,ModelCode,TrainingDate,Accuracy,DatasetID
 m0001,RF,2020/06/25,93.5,ds001
 m0002,NN,2020/03/12,88.2,ds002
 m0003,SVM,2020/09/18,85.7,ds003

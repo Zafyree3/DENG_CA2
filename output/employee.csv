@@ -1,4 +1,4 @@
-Employee ID,First Name,Last Name,Contact Number,Gender
+EmployeeID,FirstName,LastName,Contact,Gender
 e00001,Christopher,Thomas,7123456790,M
 e00002,Isabella,Collins,9123456788,F
 e00003,James,Allen,3123456788,M

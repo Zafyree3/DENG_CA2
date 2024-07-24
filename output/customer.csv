@@ -1,4 +1,4 @@
-Customer ID,First Name,Last Name,Company Name,Contact Number
+CustomerID,FirstName,LastName,CompanyName,Contact
 c0001,John,Doe,ABC Company,5123456789
 c0002,Jane,Smith,XYZ Corporation,7123456789
 c0003,Michael,Johnson,Acme Inc.,9123456787
