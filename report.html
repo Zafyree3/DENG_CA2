@@ -14872,6 +14872,87 @@ Name: count, dtype: int64
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#show the rows with the duplicated contact numbers and order by index and show only the index and by 1</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">customer_df</span><span class="p">[</span><span class="n">customer_df</span><span class="p">[</span><span class="s1">'Contact Number'</span><span class="p">]</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[1,
+ 2,
+ 5,
+ 6,
+ 7,
+ 8,
+ 10,
+ 11,
+ 13,
+ 16,
+ 21,
+ 23,
+ 31,
+ 32,
+ 34,
+ 35,
+ 39,
+ 40,
+ 43,
+ 50,
+ 51,
+ 52,
+ 53,
+ 54,
+ 56,
+ 59,
+ 60,
+ 61,
+ 62,
+ 63,
+ 64,
+ 65,
+ 66,
+ 67,
+ 68,
+ 69,
+ 70,
+ 71,
+ 72,
+ 73]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15115,6 +15196,384 @@ duplicates: 0
      </div>
 </div>
 </div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">employee_df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employee ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Contact Number</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>e00001</td>
+      <td>Christopher</td>
+      <td>Thomas</td>
+      <td>7123456790</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>e00002</td>
+      <td>Isabella</td>
+      <td>Collins</td>
+      <td>9123456788</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>e00003</td>
+      <td>James</td>
+      <td>Allen</td>
+      <td>3123456788</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>e00004</td>
+      <td>Elizabeth</td>
+      <td>Morris</td>
+      <td>4123456790</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e00005</td>
+      <td>David</td>
+      <td>Clark</td>
+      <td>6123456790</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>e00006</td>
+      <td>Sophia</td>
+      <td>Young</td>
+      <td>8123456788</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>e00007</td>
+      <td>Matthew</td>
+      <td>Adams</td>
+      <td>2123456790</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>e00008</td>
+      <td>Olivia</td>
+      <td>Hall</td>
+      <td>5123456790</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>e00009</td>
+      <td>Ethan</td>
+      <td>Russell</td>
+      <td>7123456785</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>e00010</td>
+      <td>Emma</td>
+      <td>Watson</td>
+      <td>9123456786</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>e00011</td>
+      <td>Alexander</td>
+      <td>Ross</td>
+      <td>1123456790</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>e00012</td>
+      <td>Ava</td>
+      <td>Parker</td>
+      <td>2123456790</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>e00013</td>
+      <td>Daniel</td>
+      <td>Wright</td>
+      <td>7123456783</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>e00014</td>
+      <td>Mia</td>
+      <td>Lewis</td>
+      <td>8123456790</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>e00015</td>
+      <td>Benjamin</td>
+      <td>King</td>
+      <td>3123456790</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>e00016</td>
+      <td>Emily</td>
+      <td>Scott</td>
+      <td>4123456783</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>e00017</td>
+      <td>Jackson</td>
+      <td>Walker</td>
+      <td>5123456785</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>e00018</td>
+      <td>Grace</td>
+      <td>Green</td>
+      <td>7123456789</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>e00019</td>
+      <td>William</td>
+      <td>Hill</td>
+      <td>9123456784</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>e00020</td>
+      <td>Madison</td>
+      <td>Morgan</td>
+      <td>1123456783</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>e00021</td>
+      <td>Liam</td>
+      <td>Turner</td>
+      <td>2123456787</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>e00022</td>
+      <td>Chloe</td>
+      <td>Baker</td>
+      <td>4123456790</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>e00023</td>
+      <td>Ryan</td>
+      <td>Young</td>
+      <td>5123456783</td>
+      <td>Male</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># change the value of the gender from male and female to M and F</span>
+<span class="n">employee_df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"Male"</span><span class="p">,</span> <span class="s2">"M"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">employee_df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"Female"</span><span class="p">,</span> <span class="s2">"F"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">employee_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employee ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Contact Number</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>e00001</td>
+      <td>Christopher</td>
+      <td>Thomas</td>
+      <td>7123456790</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>e00002</td>
+      <td>Isabella</td>
+      <td>Collins</td>
+      <td>9123456788</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>e00003</td>
+      <td>James</td>
+      <td>Allen</td>
+      <td>3123456788</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>e00004</td>
+      <td>Elizabeth</td>
+      <td>Morris</td>
+      <td>4123456790</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e00005</td>
+      <td>David</td>
+      <td>Clark</td>
+      <td>6123456790</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16688,6 +17147,667 @@ class="
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Resorting-the-Columns">Resorting the Columns<a class="anchor-link" href="#Resorting-the-Columns">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Customer - CustomerID, FirstName, LastName, CompanyName, Contact</span>
+<span class="n">customer_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Customer ID'</span><span class="p">:</span> <span class="s1">'CustomerID'</span><span class="p">,</span> <span class="s1">'First Name'</span><span class="p">:</span> <span class="s1">'FirstName'</span><span class="p">,</span> <span class="s1">'Last Name'</span><span class="p">:</span> <span class="s1">'LastName'</span><span class="p">,</span> <span class="s1">'Company Name'</span><span class="p">:</span> <span class="s1">'CompanyName'</span><span class="p">,</span> <span class="s1">'Contact Number'</span><span class="p">:</span> <span class="s1">'Contact'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">customer_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CustomerID</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>CompanyName</th>
+      <th>Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>c0001</td>
+      <td>John</td>
+      <td>Doe</td>
+      <td>ABC Company</td>
+      <td>5123456789</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>c0002</td>
+      <td>Jane</td>
+      <td>Smith</td>
+      <td>XYZ Corporation</td>
+      <td>7123456789</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c0003</td>
+      <td>Michael</td>
+      <td>Johnson</td>
+      <td>Acme Inc.</td>
+      <td>9123456787</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>c0004</td>
+      <td>Emily</td>
+      <td>Williams</td>
+      <td>Beta Technologies</td>
+      <td>3123456789</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>c0005</td>
+      <td>David</td>
+      <td>Brown</td>
+      <td>Gamma Enterprises</td>
+      <td>4123456789</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Employee - EmployeeID, FirstName, LastName, Contact, Gender</span>
+<span class="n">employee_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Employee ID'</span><span class="p">:</span> <span class="s1">'EmployeeID'</span><span class="p">,</span> <span class="s1">'First Name'</span><span class="p">:</span> <span class="s1">'FirstName'</span><span class="p">,</span> <span class="s1">'Last Name'</span><span class="p">:</span> <span class="s1">'LastName'</span><span class="p">,</span> <span class="s1">'Contact Number'</span><span class="p">:</span> <span class="s1">'Contact'</span><span class="p">,</span> <span class="s1">'Gender'</span><span class="p">:</span> <span class="s1">'Gender'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">employee_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeID</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Contact</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>e00001</td>
+      <td>Christopher</td>
+      <td>Thomas</td>
+      <td>7123456790</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>e00002</td>
+      <td>Isabella</td>
+      <td>Collins</td>
+      <td>9123456788</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>e00003</td>
+      <td>James</td>
+      <td>Allen</td>
+      <td>3123456788</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>e00004</td>
+      <td>Elizabeth</td>
+      <td>Morris</td>
+      <td>4123456790</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e00005</td>
+      <td>David</td>
+      <td>Clark</td>
+      <td>6123456790</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dataset - DatasetID, DatasetName</span>
+<span class="n">dataset_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Dataset ID'</span><span class="p">:</span> <span class="s1">'DatasetID'</span><span class="p">,</span> <span class="s1">'Dataset Name'</span><span class="p">:</span> <span class="s1">'DatasetName'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dataset_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DatasetID</th>
+      <th>DatasetName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ds001</td>
+      <td>Retail_Sales_Data</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ds002</td>
+      <td>Customer_Churn_Analysis</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ds003</td>
+      <td>Stock_Market_Prices</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ds004</td>
+      <td>Employee_Satisfaction_Survey</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ds005</td>
+      <td>Marketing_Campaign_Performance</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ModelType - ModelCode, ModelType</span>
+<span class="n">model_type_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Model Code'</span><span class="p">:</span> <span class="s1">'ModelCode'</span><span class="p">,</span> <span class="s1">'Model Type'</span><span class="p">:</span> <span class="s1">'ModelType'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">model_type_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ModelCode</th>
+      <th>Model Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>DT</td>
+      <td>Decision Tree</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>RF</td>
+      <td>Random Forest</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LR</td>
+      <td>Linear Regression</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NN</td>
+      <td>Neural Network</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SVM</td>
+      <td>Support Vector Machine</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Model - ModelID, ModelCode, TrainingDate, Accuracy, DatasetID</span>
+<span class="n">model_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Model ID'</span><span class="p">:</span> <span class="s1">'ModelID'</span><span class="p">,</span> <span class="s1">'Model Code'</span><span class="p">:</span> <span class="s1">'ModelCode'</span><span class="p">,</span> <span class="s1">'Training Date'</span><span class="p">:</span> <span class="s1">'TrainingDate'</span><span class="p">,</span> <span class="s1">'Accuracy'</span><span class="p">:</span> <span class="s1">'Accuracy'</span><span class="p">,</span> <span class="s1">'Dataset ID'</span><span class="p">:</span> <span class="s1">'DatasetID'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">model_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ModelID</th>
+      <th>ModelCode</th>
+      <th>TrainingDate</th>
+      <th>Accuracy</th>
+      <th>DatasetID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>m0001</td>
+      <td>RF</td>
+      <td>2020/06/25</td>
+      <td>93.5</td>
+      <td>ds001</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>m0002</td>
+      <td>NN</td>
+      <td>2020/03/12</td>
+      <td>88.2</td>
+      <td>ds002</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>m0003</td>
+      <td>SVM</td>
+      <td>2020/09/18</td>
+      <td>85.7</td>
+      <td>ds003</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>m0004</td>
+      <td>kNN</td>
+      <td>2020/07/19</td>
+      <td>91.4</td>
+      <td>ds004</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>m0005</td>
+      <td>DT</td>
+      <td>2020/02/05</td>
+      <td>86.9</td>
+      <td>ds005</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Orders - OrderID, OrderDate, CompletionDate, RequiredAcc, Price, ModelCode, CustomerID, EmployeeID, ModelID</span>
+<span class="n">order_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Order ID'</span><span class="p">:</span> <span class="s1">'OrderID'</span><span class="p">,</span> <span class="s1">'Order Date'</span><span class="p">:</span> <span class="s1">'OrderDate'</span><span class="p">,</span> <span class="s1">'Completion Date'</span><span class="p">:</span> <span class="s1">'CompletionDate'</span><span class="p">,</span> <span class="s1">'Required Accuracy'</span><span class="p">:</span> <span class="s1">'RequiredAcc'</span><span class="p">,</span> <span class="s1">'Customer ID'</span><span class="p">:</span> <span class="s1">'CustomerID'</span><span class="p">,</span> <span class="s1">'Employee ID'</span><span class="p">:</span> <span class="s1">'EmployeeID'</span><span class="p">,</span> <span class="s1">'Model ID'</span><span class="p">:</span> <span class="s1">'ModelID'</span><span class="p">,</span> <span class="s2">"Required Model Type"</span><span class="p">:</span> <span class="s2">"ModelCode"</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Change the columns orders</span>
+<span class="n">order_df</span> <span class="o">=</span> <span class="n">order_df</span><span class="p">[[</span><span class="s1">'OrderID'</span><span class="p">,</span> <span class="s1">'OrderDate'</span><span class="p">,</span> <span class="s1">'CompletionDate'</span><span class="p">,</span> <span class="s1">'RequiredAcc'</span><span class="p">,</span> <span class="s1">'Price'</span><span class="p">,</span> <span class="s1">'ModelCode'</span><span class="p">,</span> <span class="s1">'CustomerID'</span><span class="p">,</span> <span class="s1">'EmployeeID'</span><span class="p">,</span> <span class="s1">'ModelID'</span><span class="p">]]</span>
+<span class="n">order_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>OrderID</th>
+      <th>OrderDate</th>
+      <th>CompletionDate</th>
+      <th>RequiredAcc</th>
+      <th>Price</th>
+      <th>ModelCode</th>
+      <th>CustomerID</th>
+      <th>EmployeeID</th>
+      <th>ModelID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>S231255</td>
+      <td>2023/11/25</td>
+      <td>2023/12/05</td>
+      <td>60.31</td>
+      <td>676</td>
+      <td>NN</td>
+      <td>c0058</td>
+      <td>e00010</td>
+      <td>m0008</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>S210837</td>
+      <td>2021/09/25</td>
+      <td>2021/12/07</td>
+      <td>68.01</td>
+      <td>125</td>
+      <td>kNN</td>
+      <td>c0032</td>
+      <td>e00019</td>
+      <td>m0034</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>S210316</td>
+      <td>2021/10/12</td>
+      <td>2021/12/17</td>
+      <td>70.39</td>
+      <td>266</td>
+      <td>LR</td>
+      <td>c0032</td>
+      <td>e00004</td>
+      <td>m0075</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>S221093</td>
+      <td>2022/03/25</td>
+      <td>2022/10/05</td>
+      <td>61.75</td>
+      <td>399</td>
+      <td>NN</td>
+      <td>c0014</td>
+      <td>e00014</td>
+      <td>m0023</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>S210253</td>
+      <td>2021/10/22</td>
+      <td>2021/12/06</td>
+      <td>56.60</td>
+      <td>236</td>
+      <td>SVM</td>
+      <td>c0016</td>
+      <td>e00016</td>
+      <td>m0056</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16749,22 +17869,6 @@ class="
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>
